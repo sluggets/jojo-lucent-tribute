@@ -1,0 +1,60 @@
+.row
+{
+  text-align: center;
+  margin-left: 125px;
+}
+.opacity-lucent
+{
+  width: 612px;
+  height: 612px;
+  display: block;
+  position: relative;
+  margin: auto;
+}
+
+.opacity-lucent::after
+{
+  content: "";
+  background: url("../img/l612x612.jpg");
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.opacity-jojo
+{
+  width: 612px;
+  height: 612px;
+  display: block;
+  position: relative;
+  margin: auto;
+}
+
+.opacity-jojo::after
+{
+  content: "";
+  background: url("../img/j612x612.jpg");
+  opacity: 0.6;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.opacity-jojo > h1
+{
+  margin-top: 500px;
+  font-size: 100px;
+}
+
+.opacity-lucent > h1
+{
+  margin-top: 500px;
+  font-size: 100px;
+}
