@@ -18,20 +18,28 @@ img
   color: white;
   font-family: 'Nunito', sans-serif;
   position: relative;
-  font-size: 175px;
+  font-size: 125px;
   top: -1.3em;
+}
+
+.lucent > h1
+{
+  text-shadow: 7px 7px 10px #756157;
+}
+
+.jojo > h1
+{
+  text-shadow: 7px 7px 10px #6f5d63;
 }
 
 .lucent
 {
-  /*padding-right: 0;*/
   padding: 0;
   height: 1000px;
 }
 
 .jojo
 {
-  /*padding-left: 0;*/
   padding: 0;
   height: 1000px;
 }
