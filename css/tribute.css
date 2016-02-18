@@ -3,7 +3,7 @@ body
   background: #ded7d3;
 }
 
-#custom-align
+.custom-align
 {
   text-align: center;
 }
@@ -44,4 +44,18 @@ img
   height: 1000px;
 }
 
+.trib
+{
+}
 
+.trib > h2
+{
+}
+
+@media (min-width: 1200px) and (max-width: 1610px)
+{
+  .trib
+  {
+    margin-top: -12em;
+  }
+}
