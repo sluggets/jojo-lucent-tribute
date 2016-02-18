@@ -1,60 +1,47 @@
-.row
+body
+{
+  background: #ded7d3;
+}
+
+#custom-align
 {
   text-align: center;
-  /*margin-left: 125px;*/
-}
-.opacity-lucent
-{
-  width: 612px;
-  height: 612px;
-  display: block;
-  position: relative;
-  margin: auto;
 }
 
-.opacity-lucent::after
+img
 {
-  content: "";
-  background: url("../img/l612x612.jpg");
   opacity: 0.6;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
 }
 
-.opacity-jojo
+.lucent > h1, .jojo > h1
 {
-  width: 612px;
-  height: 612px;
-  display: block;
+  color: white;
+  font-family: 'Nunito', sans-serif;
   position: relative;
-  margin: auto;
+  font-size: 125px;
+  top: -1.3em;
 }
 
-.opacity-jojo::after
+.lucent > h1
 {
-  content: "";
-  background: url("../img/j612x612.jpg");
-  opacity: 0.6;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+  text-shadow: 7px 7px 10px #756157;
 }
 
-.opacity-jojo > h1
+.jojo > h1
 {
-  margin-top: 500px;
-  font-size: 100px;
+  text-shadow: 7px 7px 10px #6f5d63;
 }
 
-.opacity-lucent > h1
+.lucent
 {
-  margin-top: 500px;
-  font-size: 100px;
+  padding: 0;
+  height: 1000px;
 }
+
+.jojo
+{
+  padding: 0;
+  height: 1000px;
+}
+
+
