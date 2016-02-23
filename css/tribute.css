@@ -44,12 +44,20 @@ img
   height: 1000px;
 }
 
-.trib
-{
-}
-
 .trib > h2
 {
+  font-size: 3em;
+}
+
+.trib > h2, .gallery
+{
+  font-family: 'Arvo', serif; 
+  color: #6a565d;
+}
+
+.gallery
+{
+  font-size: 1.5em;
 }
 
 @media (min-width: 1200px) and (max-width: 1610px)
@@ -58,4 +66,14 @@ img
   {
     margin-top: -12em;
   }
+}
+
+#jgallery
+{
+  display: none;
+}
+
+#lgallery
+{
+  display: none;
 }
