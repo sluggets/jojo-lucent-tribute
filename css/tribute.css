@@ -130,5 +130,11 @@ img
 
 #lgallery
 {
-  display: none;
+  /*display: none;*/
+  margin-left: 10em;
+}
+
+.thumbnail
+{
+  width: 200px;
 }
