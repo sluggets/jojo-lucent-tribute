@@ -1,3 +1,6 @@
+/* so need to throw in to those multiple media queries
+multiple versions of the arrows and margins for photos
+and custom sizes of photos, all the way down to mobile */
 body
 {
   background: #ded7d3;
@@ -212,4 +215,30 @@ body
   background-color: inherit;
   border-radius: 10px 10px 0px 0px;
   text-shadow: none;
+}
+
+.fa-5x
+{
+}
+.fa-angle-right, .fa-angle-left
+{
+  color: white;
+}
+
+#arrows
+{
+  text-align: center;
+}
+
+#left-arrow
+{
+}
+
+#right-arrow
+{
+}
+
+.both-arrows
+{
+  margin-top: 50vh;
 }
