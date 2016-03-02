@@ -1,6 +1,17 @@
 /* so need to throw in to those multiple media queries
 multiple versions of the arrows and margins for photos
 and custom sizes of photos, all the way down to mobile */
+/*
+ need to handle media queries!!! so far 1500px and 1920px
+ looks good. Mobile portrait looks good too!
+ It's the in-between that'll need help.
+ dis will hookup the PORTRAIT mobile view
+ not sure about landscape, test it
+.litebox
+{
+  margin-top: 20vh;
+}
+*/
 body
 {
   background: #ded7d3;
@@ -21,11 +32,9 @@ body
 /* if profile pic width: 35% */
   #lucentpic
   {
-    opacity: 1.0;
-    width: 90%;
-    height: 90%;
-    margin-top: 45%;
-    margin-left: 3.5em;
+    width: auto;
+    height: auto;
+    margin: auto;
   }
 
   #jojopic
@@ -33,17 +42,20 @@ body
     margin: auto;
     margin-top: 50%;
   }
+
+  .both-arrows
+  {
+
+  }
 }
 
 @media (min-width: 1201px)
 {
   #lucentpic
   {
-    opacity: 1.0;
-    width: 60%;
-    height: 60%;
+    width: 80%;
+    height: auto;
     margin: auto;
-    margin-top: 2em;
   }
 
   #jojopic
@@ -51,6 +63,11 @@ body
     margin: auto;
     /*margin-top: 3.5em;*/
     margin-top: 5%;
+  }
+
+  .both-arrows
+  {
+    margin-top: 50vh;
   }
 }
 
@@ -238,7 +255,3 @@ body
 {
 }
 
-.both-arrows
-{
-  margin-top: 50vh;
-}

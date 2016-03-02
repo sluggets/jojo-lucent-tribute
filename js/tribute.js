@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  // build url array for img paths of jojo pics
+  // build url array for img paths of jojo thumbnails 
   var jojoUrls = new Array();
   var jojoPrefix = 'img/jojo_thumbnails/thumbjo';
   for (var i = 1; i < 20; i++)
@@ -8,7 +8,7 @@ $(document).ready(function() {
     jojoUrls.push(jojoPrefix + i + '.jpg');
   }
 
-  // build url array for img paths of lucent pics
+  // build url array for img paths of lucent thumbnails 
   var lucentUrls = new Array();
   var lucentPrefix = 'img/lucent_thumbnails/thumbluc';
   for (var i = 1; i < 20; i++)
