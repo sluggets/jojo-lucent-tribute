@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  checkSize();
 
   // build url array for img paths of jojo thumbnails 
   var jojoUrls = new Array();
@@ -115,3 +116,17 @@ function toggleGallery(dogStr)
     $(pGalleryId).toggle();
   }
 } 
+
+function checkSize()
+{
+  var val = $("#luc_header").css("color");
+  console.log(val);
+  if ($("#luc_header").css("color") == "rgb(242, 242, 242)")
+  {
+    console.log("large");
+  }
+  else
+  {
+    console.log("small");
+  }
+}

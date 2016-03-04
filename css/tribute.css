@@ -24,7 +24,7 @@ body
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   z-index: 100;
-  /*display: none;*/
+  display: none;
 }
 
 @media (min-width: 200px)
@@ -35,6 +35,7 @@ body
     width: auto;
     height: auto;
     margin: auto;
+    --check-type: small;
   }
 
   #jojopic
@@ -49,7 +50,31 @@ body
   }
 }
 
-@media (min-width: 1201px)
+@media (min-width: 500px)
+{
+  #lucentpic
+  {
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+
+  #jojopic
+  {
+    margin: auto;
+    /*margin-top: 50%;*/
+    width: 60%;
+    height: auto;
+  }
+
+  .both-arrows
+  {
+
+  }
+
+}
+
+@media (min-width: 992px)
 {
   #lucentpic
   {
@@ -61,8 +86,10 @@ body
   #jojopic
   {
     margin: auto;
-    /*margin-top: 3.5em;*/
-    margin-top: 5%;
+    /*margin-top: 3.5em;
+    margin-top: 5%;*/
+    width: 60%;
+    height: auto;
   }
 
   .both-arrows
@@ -253,5 +280,21 @@ body
 
 #right-arrow
 {
+}
+
+@media (min-width: 100px)
+{
+  #luc_header
+  {
+    color: white;
+  }
+}
+
+@media (min-width: 900px)
+{
+  #luc_header
+  {
+    color: #f2f2f2;
+  }
 }
 
