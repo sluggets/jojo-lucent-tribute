@@ -3,16 +3,16 @@ $(document).ready(function() {
 
   // build url array for img paths of jojo thumbnails 
   var jojoUrls = new Array();
-  var jojoPrefix = 'img/jojo_thumbnails/thumbjo';
-  for (var i = 1; i < 20; i++)
+  var jojoPrefix = 'img/jojo_thumbnails/j';
+  for (var i = 1; i < 21; i++)
   {
     jojoUrls.push(jojoPrefix + i + '.jpg');
   }
 
   // build url array for img paths of lucent thumbnails 
   var lucentUrls = new Array();
-  var lucentPrefix = 'img/lucent_thumbnails/thumbluc';
-  for (var i = 1; i < 20; i++)
+  var lucentPrefix = 'img/lucent_thumbnails/l';
+  for (var i = 1; i < 21; i++)
   {
     lucentUrls.push(lucentPrefix + i + '.jpg');
   }
@@ -27,6 +27,11 @@ $(document).ready(function() {
 
   $('#joheader').click(function() {
     toggleGallery("jojo");
+  });
+
+  $('.l').click(function() {
+    idStr = $(this).get(0).id;
+    console.log(idStr);
   });
 });
 
@@ -51,8 +56,18 @@ function displayDogThumbnails(urlArray, galleryString, altString)
    
     colsCount++; 
     var anchor = document.createElement('a');
-    anchor.setAttribute('href', '#');
-    anchor.setAttribute('class', 'thumbnail');
+    anchor.setAttribute('href', 'javascript:void(0)');
+    var urlStr = urlArray[i];
+    if (i < 10)
+    {
+      var photoId = urlStr.substring(urlStr.length - 6, urlStr.length - 4);
+    } 
+    else
+    {
+      var photoId = urlStr.substring(urlStr.length - 7, urlStr.length - 4);
+    }
+    anchor.setAttribute('class', 'thumbnail ' + photoId[0]);
+    anchor.setAttribute('id', photoId);
     
     var img = document.createElement('img');
     img.setAttribute('src', urlArray[i]);
@@ -117,16 +132,20 @@ function toggleGallery(dogStr)
   }
 } 
 
+// whether to use large or small lucent photo
 function checkSize()
 {
   var val = $("#luc_header").css("color");
-  console.log(val);
   if ($("#luc_header").css("color") == "rgb(242, 242, 242)")
   {
-    console.log("large");
+    return 'large';
+  }
+  else if ($("#luc_header").css("color") == 'white')
+  {
+    return 'small';
   }
   else
   {
-    console.log("small");
+    return null;
   }
 }
