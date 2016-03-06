@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  checkSize();
 
   // build url array for img paths of jojo thumbnails 
   var jojoUrls = new Array();
@@ -17,10 +16,12 @@ $(document).ready(function() {
     lucentUrls.push(lucentPrefix + i + '.jpg');
   }
   
+  // builds thumbnail galleries for display
   displayDogThumbnails(lucentUrls, 'lgallery', 'Lucent the chihuahua');
 
   displayDogThumbnails(jojoUrls, 'jgallery', 'Jojo the pitbull mix');
 
+  // toggles which gallery takes over page
   $('#luheader').click(function() {
     toggleGallery("lucent");
   });
@@ -29,9 +30,15 @@ $(document).ready(function() {
     toggleGallery("jojo");
   });
 
+  // opens photo for larger lightbox display
+  $('.j').click(function() {
+    var idStr = $(this).get(0).id;
+    displayDog(idStr, "jojopic");
+  });
+
   $('.l').click(function() {
-    idStr = $(this).get(0).id;
-    console.log(idStr);
+    var idStr = $(this).get(0).id;
+    displayDog(idStr, "lucentpic");
   });
 });
 
@@ -58,7 +65,7 @@ function displayDogThumbnails(urlArray, galleryString, altString)
     var anchor = document.createElement('a');
     anchor.setAttribute('href', 'javascript:void(0)');
     var urlStr = urlArray[i];
-    if (i < 10)
+    if (i < 9)
     {
       var photoId = urlStr.substring(urlStr.length - 6, urlStr.length - 4);
     } 
@@ -149,3 +156,49 @@ function checkSize()
     return null;
   }
 }
+
+// displays respective dog's photo in lightbox when thumbnail clicked
+function displayDog(idStr, dogId)
+{
+    var urlPrefix = idStr.slice(1);
+    var image = document.createElement('img');
+    image.className = "img responsive";
+    image.id = dogId;
+    if (dogId == "lucentpic")
+    {
+      var sizeResult = checkSize();
+      var pathPre = 'img/lucent_gallery/';
+      if (sizeResult == 'large')
+      {
+        var pathPost = 'x1500.jpg';
+      }
+      else
+      {
+        var pathPost = 'x600.jpg';
+      }
+    }
+    else
+    {
+      pathPre = 'img/jojo_gallery/';
+      pathPost = '.jpg'
+    }
+    var urlComplete = pathPre + urlPrefix + pathPost;
+    image.setAttribute('src', urlComplete);
+    var lightbox = document.getElementById("lbdog");
+    lightbox.appendChild(image);
+    $(".lightbox").toggle();    
+    if (dogId == "lucentpic")
+    {
+      var newImage = new Image();
+      newImage.src = urlComplete;
+      newImage.onload = function() 
+      {
+        var picHeight = this.height;
+        if (picHeight < 1100)
+        {
+          $('#lucentpic').css("width", "100%");    
+        }
+      }
+    }
+}
+
