@@ -55,6 +55,18 @@ $(document).ready(function() {
     currentPhoto--;
     displayDog(currentPhoto, currentDog, "inside");
   });
+
+  // closes lightbox mode
+  $('#close').click(function() {
+    $(".lightbox").toggle();    
+    $('#left-arrow').css("visibility", "visible");
+    $('#right-arrow').css("visibility", "visible");
+    var currentLb = document.getElementById("lbdog");
+    var nested = document.getElementById(currentDog);
+    currentLb.removeChild(nested);
+    currentPhoto = 0;
+    currentDog = null;
+  });
 });
 
 // builds thumbnails into gallery to be toggled into

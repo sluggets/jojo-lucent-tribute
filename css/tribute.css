@@ -21,7 +21,7 @@ body
 {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   z-index: 100;
   display: none;
@@ -29,7 +29,6 @@ body
 
 @media (min-width: 200px)
 {
-/* if profile pic width: 35% */
   #lucentpic
   {
     width: auto;
@@ -62,7 +61,6 @@ body
   #jojopic
   {
     margin: auto;
-    /*margin-top: 50%;*/
     width: 60%;
     height: auto;
   }
@@ -86,8 +84,6 @@ body
   #jojopic
   {
     margin: auto;
-    /*margin-top: 3.5em;
-    margin-top: 5%;*/
     width: 60%;
     height: auto;
   }
@@ -254,11 +250,21 @@ body
   text-shadow: none;
 }
 
+#lugal:hover
+{
+  text-shadow: 1px 1px 10px #756157;
+}
+
 #joheader
 {
   background-color: inherit;
   border-radius: 10px 10px 0px 0px;
   text-shadow: none;
+}
+
+#jogal:hover
+{
+  text-shadow: 1px 1px 10px #756157;
 }
 
 .fa-5x
@@ -300,3 +306,10 @@ body
   }
 }
 
+#close
+{
+  z-index: 100;
+  position: absolute; 
+  margin-left: 4em;
+  color: white;
+}
