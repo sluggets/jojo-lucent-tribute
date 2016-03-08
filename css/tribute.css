@@ -276,10 +276,12 @@ body
 
 #left-arrow
 {
+  visibility: visible;
 }
 
 #right-arrow
 {
+  visibility: visible;
 }
 
 @media (min-width: 100px)

@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  currentPhoto = 0;
+  currentDog = null;
   // build url array for img paths of jojo thumbnails 
   var jojoUrls = new Array();
   var jojoPrefix = 'img/jojo_thumbnails/j';
@@ -33,12 +35,33 @@ $(document).ready(function() {
   // opens photo for larger lightbox display
   $('.j').click(function() {
     var idStr = $(this).get(0).id;
-    displayDog(idStr, "jojopic");
+    var urlPrefix = idStr.slice(1);
+    displayDog(urlPrefix, "jojopic", "outside");
   });
 
   $('.l').click(function() {
     var idStr = $(this).get(0).id;
-    displayDog(idStr, "lucentpic");
+    var urlPrefix = idStr.slice(1);
+    displayDog(urlPrefix, "lucentpic", "outside");
+  });
+
+  // handles arrow navigation in lightbox
+  $('#right-arrow').click(function() {
+    currentPhoto++; 
+    console.log(currentPhoto + ' ' + currentDog);
+    displayDog(currentPhoto, currentDog, "inside");
+    /*console.log(currentPhoto + ' ' + currentDog);
+    currentPhoto++;
+    var currentImg = document.getElementById(currentDog);
+    var currentSrc = currentImg.src;
+    if (currentDog == 'lucentpic')
+    {
+      if 
+    }*/
+  });
+
+  $('#left-arrow').click(function() {
+    currentPhoto--;
   });
 });
 
@@ -158,9 +181,25 @@ function checkSize()
 }
 
 // displays respective dog's photo in lightbox when thumbnail clicked
-function displayDog(idStr, dogId)
+function displayDog(urlPrefix, dogId, lbLocation)
 {
-    var urlPrefix = idStr.slice(1);
+    currentPhoto = urlPrefix;
+    currentDog = dogId;
+ 
+    if (currentPhoto == 1)
+    {
+      $('#left-arrow').css('visibility', 'hidden');
+    }
+    else if (currentPhoto == 20)
+    {
+      $('#right-arrow').css('visibility', 'hidden');
+    }
+    else
+    {
+      $('#right-arrow').css('visibility', 'visible');
+      $('#left-arrow').css('visibility', 'visible');
+    }
+
     var image = document.createElement('img');
     image.className = "img responsive";
     image.id = dogId;
@@ -185,8 +224,18 @@ function displayDog(idStr, dogId)
     var urlComplete = pathPre + urlPrefix + pathPost;
     image.setAttribute('src', urlComplete);
     var lightbox = document.getElementById("lbdog");
-    lightbox.appendChild(image);
-    $(".lightbox").toggle();    
+    if (lbLocation == 'inside')
+    {
+      var oldImage = document.getElementById(dogId);
+      var parentDiv = oldImage.parentNode;
+      parentDiv.replaceChild(image, oldImage);
+    }
+    else if (lbLocation == 'outside')
+    {
+      lightbox.appendChild(image);
+      $(".lightbox").toggle();    
+    }
+
     if (dogId == "lucentpic")
     {
       var newImage = new Image();
