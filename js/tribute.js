@@ -48,20 +48,12 @@ $(document).ready(function() {
   // handles arrow navigation in lightbox
   $('#right-arrow').click(function() {
     currentPhoto++; 
-    console.log(currentPhoto + ' ' + currentDog);
     displayDog(currentPhoto, currentDog, "inside");
-    /*console.log(currentPhoto + ' ' + currentDog);
-    currentPhoto++;
-    var currentImg = document.getElementById(currentDog);
-    var currentSrc = currentImg.src;
-    if (currentDog == 'lucentpic')
-    {
-      if 
-    }*/
   });
 
   $('#left-arrow').click(function() {
     currentPhoto--;
+    displayDog(currentPhoto, currentDog, "inside");
   });
 });
 
