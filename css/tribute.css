@@ -140,7 +140,7 @@ body
   font-size: 3em;
 }
 
-.trib > h2, .gallery
+.trib > h2, .gallery, #quotes, .subreddits, #portfolio
 {
   font-family: 'Arvo', serif; 
   color: #6a565d;
@@ -312,4 +312,94 @@ body
   position: absolute; 
   margin-left: 4em;
   color: white;
+}
+
+blockquote
+{
+  font-size: 2em;
+  margin-top: 2em;
+}
+
+.subreddits, .subreddits > a, .subreddits > a:hover
+{
+  color: #6a565d;
+  font-size: 2em;
+}
+
+.subreddits
+{
+  margin-bottom: 2em;
+}
+
+a
+{
+  color: #6a565d;
+}
+
+.sr:hover
+{
+  color: #6a565d;
+  text-decoration: none;
+  text-shadow: 1px 1px 10px #756157;
+}
+
+span
+{
+  margin-right: 1.25em;
+}
+
+#portfolio
+{
+  color: #6a565d;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+
+.list-group-item
+{
+  background-color: #9c002f;
+  border: 1px solid #800026;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#about
+{
+  display: none; 
+}
+
+#projects
+{
+  display: none;
+}
+
+#timpic
+{
+  display: none;
+  border-radius: 30px;
+}
+
+#portfolio i
+{
+  margin-left: 8px;
+}
+
+#portfolio a:hover, #portfolio a:visited, #portfolio a:focus
+{
+  text-decoration: none;
+}
+
+#portfolio a
+{
+  text-shadow: none;
+}
+
+#portfolio a:hover, #portfolio a:visited, #portfolio a:focus
+{
+  text-shadow: 1px 1px 10px #756157;
+  color: #6a565d;
 }
