@@ -387,9 +387,13 @@ span
 
 @media (max-width: 1000px) 
 {
-  .list-group-item-heading
+  .list-group-item-heading 
   {
     font-size: 3em;
+  }
+  .list-group-item-text
+  {
+    font-size: 1.75em;
   }
 }
 
