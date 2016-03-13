@@ -384,10 +384,12 @@ span
   color: #6a565d;
 }
 
-@media (max-width: 900px)
+
+@media (max-width: 1000px) 
 {
-  .list-group
+  .list-group-item-heading
   {
     font-size: 3em;
   }
 }
+
