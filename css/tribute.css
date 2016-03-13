@@ -335,6 +335,7 @@ span
   text-align: center;
   padding-top: 10px;
   padding-bottom: 5px;
+  margin-right: -3em;
 }
 
 
@@ -381,4 +382,12 @@ span
 {
   text-shadow: 1px 1px 10px #756157;
   color: #6a565d;
+}
+
+@media (min-width: 900px)
+{
+  .list-group
+  {
+    font-size: 3em;
+  }
 }
