@@ -1,17 +1,3 @@
-/* so need to throw in to those multiple media queries
-multiple versions of the arrows and margins for photos
-and custom sizes of photos, all the way down to mobile */
-/*
- need to handle media queries!!! so far 1500px and 1920px
- looks good. Mobile portrait looks good too!
- It's the in-between that'll need help.
- dis will hookup the PORTRAIT mobile view
- not sure about landscape, test it
-.litebox
-{
-  margin-top: 20vh;
-}
-*/
 body
 {
   background: #ded7d3;
@@ -34,7 +20,6 @@ body
     width: auto;
     height: auto;
     margin: auto;
-    --check-type: small;
   }
 
   #jojopic
@@ -232,12 +217,6 @@ body
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-/*
-
-  background-color: rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 1px 10px #756157;
-
-*/
 .thumbnail
 {
   width: 200px;
