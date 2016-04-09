@@ -125,7 +125,7 @@ body
   font-size: 3em;
 }
 
-.trib > h2, .gallery, #quotes, .subreddits, #portfolio
+.trib > h2, .gallery, #quotes, .subreddits, #portfolio, p
 {
   font-family: 'Arvo', serif; 
   color: #6a565d;
